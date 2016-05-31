@@ -1,7 +1,7 @@
 {
-  "name": "reactstartercode",
+  "name": "learningredux",
   "version": "1.0.0",
-  "description": "A starter code to code in React with Babel and Gulp (=> ES2015)",
+  "description": "A starter code to code in React & Redux with Babel and Gulp (=> ES2015)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

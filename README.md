@@ -1,6 +1,7 @@
-# React & ES2015 :
+# React & ES2015 & Redu :
 
 Starter code for transpiling ES2015 & React project into one single file with Babel, Gulp and Browserify.
+I'm using it to learn Redux
 
 #How to use it?
 
