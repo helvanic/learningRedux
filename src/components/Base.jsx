@@ -1,5 +1,6 @@
 import React from 'react'
 import User from './User.jsx'
+import Form from './Form.jsx'
 
 export default class Base extends React.Component {
 
@@ -19,6 +20,8 @@ export default class Base extends React.Component {
         <div className="user-list">
           {users}
         </div>
+        <Form handleChange={this._handleFormChange.bind(this)}/>
+        <p>{this.state.text}</p>
       </div>
     );
   }
@@ -30,5 +33,11 @@ export default class Base extends React.Component {
                 name={user.name}
                 key={user.id}/>
     });
+  }
+
+  _handleFormChange(value){
+    this.setState({
+      text : value
+    })
   }
 }
