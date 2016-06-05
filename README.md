@@ -1,6 +1,7 @@
-# React & ES2015 & Redu :
+#STILL IN PROGRESS
+# React & ES2015 & Redux :
 
-Starter code for transpiling ES2015 & React project into one single file with Babel, Gulp and Browserify.
+Starter code for transpiling ES2015 & React & Redux project into one single file with Babel, Gulp and Browserify.
 I'm using it to learn Redux
 
 #How to use it?
@@ -9,5 +10,4 @@ I'm using it to learn Redux
 `npm install gulp -g`
 `npm install`
 
-
-Based on codeschool's content, but with basic components only : https://github.com/codeschool/WatchUsBuild-React
+Based on Codeschool's content, but with basic components only : https://github.com/codeschool/WatchUsBuild-React
