@@ -2,37 +2,37 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import jQuery from 'jquery'
 import Base from './components/Base.jsx'
-import UserList from './components/UserList.jsx'
+// import UserList from './components/UserList.jsx'
+import UserList2 from './components/UserListv2.jsx'
 
-
+//Stores
 import counterStore from './CounterStore'
-
-document.getElementById('app').addEventListener('click', () => {
-    counterStore.dispatch({type : 'INCREMENT'});
-    console.log(counterStore.getState());
-});
-console.log(counterStore.getState());
-
-//UserListStore
-import userListStore from './UserListStore'
+// import userListStore from './UserListStore'
+import userListStore2 from './UserListStorev2'
 
 jQuery(function() {
-
+  /* COUNTER */
   //Few ES2015 React components. Click on anything in the #app div to increase the counter
-  ReactDOM.render(
-    <Base />,
-    document.getElementById('app')
-  );
+  const renderBase = () => {
+    ReactDOM.render(
+      <Base counter={counterStore.getState()}
+            handleClick = {() => {counterStore.dispatch({type: 'INCREMENT'})}}/>,
+      document.getElementById('app')
+    );
+  }
+  renderBase();
+  counterStore.subscribe(renderBase)
 
-  //Created a few basics React components to build a UserList dynamically reflecting the app's state
+
+  /* USERS */
+  //Created a few React components to build a UserList dynamically reflecting the app's state
   const renderUsers = () => {
     ReactDOM.render(
-      <UserList users={userListStore.getState()}/>,
+      <UserList2 store={userListStore2}/>,
       document.getElementById('userList')
     );
   }
 
+  userListStore2.subscribe(renderUsers); // When the state change, renders again
   renderUsers(); //For initial rendering
-  userListStore.subscribe(renderUsers); // When the state change, renders again
-
 });

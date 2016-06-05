@@ -42,16 +42,10 @@ export default class UserBox extends React.Component {
   }
 
   _handleVerify(){
-    userListStore.dispatch({
-      type : 'VERIFY_USER',
-      id : this.props.id
-    });
+    this.props.verify(this.props.id);
   }
 
   _handleRemove(){
-    userListStore.dispatch({
-      type : 'REMOVE_USER',
-      id : this.props.id
-    });
+    this.props.remove(this.props.id);
   }
 }

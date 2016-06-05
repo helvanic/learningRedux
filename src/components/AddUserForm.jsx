@@ -24,13 +24,7 @@ export default class AddUserForm extends React.Component {
 
   _handleSubmit(event){
     event.preventDefault();
-    if(this.state.valid){
-      userListStore.dispatch({
-        type : 'ADD_USER',
-        id : Math.floor(Math.random()*100000000000),
-        name : this.state.text
-      });
-    }
+    this.props.addUser(this.state.text);
   }
 
   _handleInputChange(e){

@@ -2,7 +2,7 @@ import React from 'react'
 import UserBox from './UserBox.jsx'
 import AddUserForm from './AddUserForm.jsx'
 
-export default class Base extends React.Component {
+export default class UserList extends React.Component {
 
   constructor(){
     super();

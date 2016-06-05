@@ -15,13 +15,13 @@ export default class Base extends React.Component {
   render(){
     const users = this._getUsers();
     return (
-      <div>
+      <div onClick={this.props.handleClick}>
         <h1>Base Test</h1>
         <div className="user-list">
           {users}
         </div>
-        <Form handleChange={this._handleFormChange.bind(this)}/>
-        <p>{this.state.text}</p>
+        {/*<Form handleChange={this._handleFormChange.bind(this)}/>*/}
+        <p>{this.props.counter}</p>
       </div>
     );
   }
@@ -38,6 +38,6 @@ export default class Base extends React.Component {
   _handleFormChange(value){
     this.setState({
       text : value
-    })
+    });
   }
 }
